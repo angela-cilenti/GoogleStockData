@@ -1,1 +1,2 @@
-*.csv linguist-generated
+*.csv linguist-vendored
+*.sql linguist-detectable
