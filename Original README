@@ -1,0 +1,176 @@
+# Google/Alphabet Stock Dataset (2004-2025)
+
+## Dataset Overview
+This comprehensive dataset contains historical stock price data, financial performance metrics, and company information for Google/Alphabet Inc. from its IPO on August 19, 2004, through February 16, 2026.
+
+## Dataset Files
+
+### 1. google_stock_daily_prices.csv
+**Description:** Daily stock price data with OHLC (Open, High, Low, Close) values
+**Columns:**
+- Date: Trading date (YYYY-MM-DD format)
+- Open: Opening price for the day
+- High: Highest price during the day
+- Low: Lowest price during the day
+- Close: Closing price for the day
+- Adj Close: Split-adjusted closing price (accounts for 2014 and 2022 stock splits)
+- Volume: Number of shares traded
+- Split_Adjusted: Boolean indicating if prices are adjusted for splits
+
+**Note:** All prices are split-adjusted to reflect:
+- 2:1 stock split on April 3, 2014
+- 20:1 stock split on July 15, 2022
+- Total adjustment factor: 40x
+
+### 2. google_company_info.csv
+**Description:** Company information, milestones, and market data
+**Columns:**
+- Category: Information category (Company Info, Stock Splits, Share Classes, Milestones, Market Data)
+- Item: Specific information item
+- Value: Value or description
+- Date: Associated date (if applicable)
+- Description: Additional context
+
+### 3. google_annual_financials.csv
+**Description:** Annual financial performance summary
+**Columns:**
+- Year: Fiscal year
+- Revenue_Billions: Total revenue in billions USD
+- Net_Income_Billions: Net income in billions USD
+- EPS: Earnings per share (split-adjusted)
+- Market_Cap_Billions: Market capitalization in billions USD
+- PE_Ratio: Price-to-earnings ratio
+- Dividend_Per_Share: Annual dividend per share (started in 2024)
+- Employees: Total employee count
+- Key_Event: Major event during the year
+
+### 4. google_quarterly_earnings.csv
+**Description:** Quarterly earnings data (2020-2025)
+**Columns:**
+- Quarter: Fiscal quarter (Q1, Q2, Q3, Q4)
+- Year: Fiscal year
+- Revenue_Billions: Quarterly revenue in billions USD
+- Net_Income_Billions: Quarterly net income in billions USD
+- EPS: Quarterly earnings per share
+- YoY_Revenue_Growth: Year-over-year revenue growth percentage
+- Operating_Margin: Operating margin percentage
+- Date_Reported: Earnings report date
+
+### 5. google_revenue_segments.csv
+**Description:** Revenue breakdown by business segment
+**Columns:**
+- Year: Fiscal year
+- Google_Search_Billions: Revenue from Google Search advertising
+- YouTube_Ads_Billions: Revenue from YouTube advertising
+- Google_Network_Billions: Revenue from Google Network (AdSense, AdMob)
+- Google_Cloud_Billions: Revenue from Google Cloud Platform
+- Other_Revenues_Billions: Revenue from other sources (hardware, Play Store, etc.)
+- Total_Revenue_Billions: Total revenue
+- Cloud_Growth_Rate: Year-over-year growth rate for Google Cloud
+
+### 6. google_financial_ratios.csv
+**Description:** Key financial ratios and performance metrics
+**Columns:**
+- Year: Fiscal year
+- ROE: Return on Equity percentage
+- ROA: Return on Assets percentage
+- Current_Ratio: Current assets / Current liabilities
+- Debt_to_Equity: Debt-to-equity ratio
+- Free_Cash_Flow_Billions: Free cash flow in billions USD
+- Operating_Cash_Flow_Billions: Operating cash flow in billions USD
+- Gross_Margin: Gross profit margin percentage
+- Operating_Margin: Operating margin percentage
+- Net_Margin: Net profit margin percentage
+
+## Important Information
+
+### Stock Splits
+1. **April 3, 2014:** 2-for-1 stock split (stock dividend) that created Class C shares (GOOG)
+2. **July 15, 2022:** 20-for-1 stock split applied to all share classes
+
+### Share Classes
+- **Class A (GOOGL):** 1 vote per share, publicly traded
+- **Class B:** 10 votes per share, held by founders and insiders, not publicly traded
+- **Class C (GOOG):** 0 votes per share, publicly traded
+
+### Key Milestones
+- **August 19, 2004:** IPO at $85 per share
+- **October 2, 2015:** Corporate restructuring - Google became Alphabet Inc.
+- **April 2024:** First dividend payment initiated ($0.20 per share quarterly)
+- **February 2, 2026:** All-time high price reached ($344.90 for GOOG)
+
+## Data Sources
+- NASDAQ Historical Stock Data
+- Yahoo Finance (GOOGL, GOOG)
+- Google/Alphabet Investor Relations
+- SEC EDGAR Database (10-K, 10-Q filings)
+- Company earnings reports and press releases
+
+## Usage Examples
+
+### Python - Loading and Analyzing Data
+```python
+import pandas as pd
+
+# Load daily prices
+prices = pd.read_csv('google_stock_daily_prices.csv')
+prices['Date'] = pd.to_datetime(prices['Date'])
+prices.set_index('Date', inplace=True)
+
+# Calculate returns
+prices['Daily_Return'] = prices['Adj Close'].pct_change()
+
+# Load financial data
+financials = pd.read_csv('google_annual_financials.csv')
+print(financials[['Year', 'Revenue_Billions', 'Net_Income_Billions']])
+```
+
+### R - Loading and Analyzing Data
+```R
+# Load daily prices
+prices <- read.csv('google_stock_daily_prices.csv')
+prices$Date <- as.Date(prices$Date)
+
+# Calculate summary statistics
+summary(prices$Adj.Close)
+
+# Load financial data
+financials <- read.csv('google_annual_financials.csv')
+plot(financials$Year, financials$Revenue_Billions, type='l')
+```
+
+## Investment Calculator Example
+**Scenario:** $10,000 invested at IPO (August 19, 2004)
+- IPO Price: $85.00 per share
+- Shares Purchased: 117.65 shares
+- After Stock Splits: 4,706 shares (117.65 × 40)
+- Current Price (Feb 16, 2026): $359.24
+- Current Value: $1,690,628
+- Total Return: 16,806%
+- Annualized Return: ~26.8%
+
+*Note: This calculation does not include dividends (started in 2024)*
+
+## Data Quality Notes
+- All historical prices are split-adjusted for consistency
+- Financial data sourced from official SEC filings and earnings reports
+- Some recent data (late 2025, early 2026) may be estimates or projections
+- Prices are approximate and may vary slightly from actual trading prices
+- Always verify critical information with official sources
+
+## Disclaimer
+This dataset is provided for educational and informational purposes only. It is not financial advice. Past performance does not guarantee future results. Always consult with a qualified financial advisor before making investment decisions.
+
+## Updates
+- Dataset covers: August 19, 2004 - February 16, 2026
+- Last updated: February 16, 2026
+- Data frequency: Daily for prices, Annual/Quarterly for financials
+
+## Contact & Attribution
+When using this dataset, please attribute it appropriately and verify critical data points with official sources such as:
+- Alphabet Investor Relations: https://abc.xyz/investor/
+- SEC EDGAR Database: https://www.sec.gov/edgar
+- NASDAQ: https://www.nasdaq.com/market-activity/stocks/googl
+
+## License
+This dataset is provided for educational purposes. Stock price data is publicly available market data. Financial metrics are derived from public company filings.
