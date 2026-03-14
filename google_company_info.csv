@@ -1,0 +1,36 @@
+Category,Item,Value,Date,Description
+Company Info,Company Name,Alphabet Inc. (formerly Google Inc.),,Technology conglomerate
+Company Info,Ticker Symbol - Class A,GOOGL,,1 vote per share - publicly traded
+Company Info,Ticker Symbol - Class C,GOOG,,0 votes per share - publicly traded
+Company Info,Exchange,NASDAQ,,Primary stock exchange
+Company Info,Founded,September 4 1998,,Company founding date
+Company Info,IPO Date,August 19 2004,,Initial Public Offering
+Company Info,IPO Price,$85.00 per share,2004-08-19,Original offering price
+Company Info,Split-Adjusted IPO Price,$2.13,2004-08-19,After 2014 and 2022 splits (40x adjustment)
+Company Info,Restructuring Date,October 2 2015,,Became Alphabet Inc.
+Company Info,Sector,Technology,,Primary sector
+Company Info,Industry,Internet Content & Information,,Industry classification
+Stock Splits,First Stock Split,2-for-1,2014-04-03,Created Class C non-voting shares (GOOG)
+Stock Splits,Second Stock Split,20-for-1,2022-07-15,Applied to all share classes
+Stock Splits,Total Split Adjustment,40-for-1,,Combined effect of both splits
+Share Classes,Class A Shares,GOOGL,,1 vote per share - publicly traded
+Share Classes,Class B Shares,Not Publicly Traded,,10 votes per share - held by founders/insiders
+Share Classes,Class C Shares,GOOG,,0 votes per share - publicly traded
+Milestones,IPO,Initial Public Offering at $85/share,2004-08-19,$23 billion valuation
+Milestones,YouTube Acquisition,Acquired YouTube for $1.65 billion,2006-10-09,Entered video streaming market
+Milestones,Chrome Browser Launch,Launched Chrome web browser,2008-09-03,Entered browser market
+Milestones,Motorola Mobility Acquisition,Acquired for $12.5 billion,2011-08-15,Largest acquisition at the time
+Milestones,First Stock Split,2:1 stock split - created Class C,2014-04-03,Stock dividend creating non-voting shares
+Milestones,Alphabet Restructuring,Google became Alphabet Inc.,2015-10-02,Corporate restructuring with subsidiaries
+Milestones,$1 Trillion Market Cap,First time reaching $1 trillion,2018-04-01,Market capitalization milestone
+Milestones,Second Stock Split,20:1 stock split,2022-07-15,Improved stock accessibility
+Milestones,First Dividend Payment,Initiated quarterly dividend $0.20/share,2024-04-01,First dividend in company history
+Milestones,All-Time High Price,$344.90 (GOOG) / $343.69 (GOOGL),2026-02-02,Record high stock prices
+Market Data,Current Price (as of Feb 16 2026),$359.24,,Latest closing price
+Market Data,52-Week High,$359.24,2026-02-16,Recent high
+Market Data,52-Week Low,$140.16,2023-12-29,Recent low
+Market Data,Market Cap,$2.45 trillion,2026-02-16,Approximate market capitalization
+Market Data,Average Daily Volume,45.2 million,2026-02-16,30-day average volume
+Market Data,P/E Ratio,28.5,2026-02-16,Price-to-earnings ratio
+Market Data,Dividend Yield,0.22%,2026-02-16,Annual dividend yield
+Market Data,Beta,1.05,2026-02-16,Volatility measure vs market
