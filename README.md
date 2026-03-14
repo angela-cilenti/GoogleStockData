@@ -8,7 +8,7 @@ Ho trasformato un dataset grezzo (CSV) in un database relazionale strutturato su
 - Normalizzazione: Suddivisione dei dati in tabelle specifiche per ridurre la ridondanza.
 - Data Typing: Impostazione di formati precisi (Decimal per i valori monetari, Date per le serie storiche, Int per i volumi).
 - Integrità: Strutturazione dei dati per supportare analisi di serie temporali (Daily Prices) e confronti tra segmenti di ricavo.
-- 
+
 ### Architettura del Database
 Il database Google_Stock_Data è composto da:
 Tabella	Descrizione
@@ -42,7 +42,7 @@ I transformed a raw CSV dataset into a structured relational database using Mari
 - Normalization: Splitting the dataset into dedicated tables to reduce redundancy.
 - Data Typing: Assigning precise formats (Decimal for monetary values, Date for time series, Int for volumes).
 - Integrity: Structuring the data to support time‑series analysis (Daily Prices) and comparisons across revenue segments.
-- 
+ 
 ### Database Architecture
 The Google_Stock_Data database consists of the following tables:
 
